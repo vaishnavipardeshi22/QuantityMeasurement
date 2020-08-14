@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\admin\\source\\repos\\QuantityMeasurement\\QuantityMeasurement\\QuantityMeasurement.csproj": {
-                "projectPath": "C:\\Users\\admin\\source\\repos\\QuantityMeasurement\\QuantityMeasurement\\QuantityMeasurement.csproj"
+              "C:\\Users\\admin\\source\\repos\\QuantityMeasurement\\QuantityMeasurement\\QuantityMeasurementProblem.csproj": {
+                "projectPath": "C:\\Users\\admin\\source\\repos\\QuantityMeasurement\\QuantityMeasurement\\QuantityMeasurementProblem.csproj"
               }
             }
           }
@@ -47,11 +47,17 @@
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.4.0, )"
+              "version": "[16.7.0, )"
             },
             "NUnit3TestAdapter": {
               "target": "Package",
-              "version": "[3.15.1, )"
+              "version": "[3.17.0, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
             },
             "nunit": {
               "target": "Package",
@@ -77,12 +83,12 @@
         }
       }
     },
-    "C:\\Users\\admin\\source\\repos\\QuantityMeasurement\\QuantityMeasurement\\QuantityMeasurement.csproj": {
+    "C:\\Users\\admin\\source\\repos\\QuantityMeasurement\\QuantityMeasurement\\QuantityMeasurementProblem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\QuantityMeasurement\\QuantityMeasurement\\QuantityMeasurement.csproj",
-        "projectName": "QuantityMeasurement",
-        "projectPath": "C:\\Users\\admin\\source\\repos\\QuantityMeasurement\\QuantityMeasurement\\QuantityMeasurement.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\QuantityMeasurement\\QuantityMeasurement\\QuantityMeasurementProblem.csproj",
+        "projectName": "QuantityMeasurementProblem",
+        "projectPath": "C:\\Users\\admin\\source\\repos\\QuantityMeasurement\\QuantityMeasurement\\QuantityMeasurementProblem.csproj",
         "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\admin\\source\\repos\\QuantityMeasurement\\QuantityMeasurement\\obj\\",
         "projectStyle": "PackageReference",
@@ -113,6 +119,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.1.118, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

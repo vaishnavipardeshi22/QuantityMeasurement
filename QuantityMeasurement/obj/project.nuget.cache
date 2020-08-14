@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "k7S14HNNm28r54a4orlHroyUwoxUQ49KHxBBQSWXI1GBBcCYuw/FqPx1tcYwe4UH94L0O2slTgLJtw63eVTOOw==",
+  "dgSpecHash": "FIm2Vi8zy4gSh5nWzYfeHgOQrG9keIpe6nF8wkE/ePxEsyHrDtfGB69dKpKQSdtp43fUPxyvbeUP9OMhaVlB7Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\source\\repos\\QuantityMeasurement\\QuantityMeasurement\\QuantityMeasurement.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\admin\\source\\repos\\QuantityMeasurement\\QuantityMeasurement\\QuantityMeasurementProblem.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512"
+  ],
   "logs": []
 }
