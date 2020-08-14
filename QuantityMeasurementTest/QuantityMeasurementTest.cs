@@ -54,7 +54,7 @@ namespace QuantityMeasurementTest
         {
             double firstFeetValue = this.quantityMeasurement.GetFeetValue(0.0);
             double secondFeetValue = this.quantityMeasurement.GetFeetValue(0.0);
-            Assert.AreEqual(firstFeetValue, secondFeetValue, 0.0);
+            Assert.AreEqual(firstFeetValue, secondFeetValue);
         }
 
         /// <summary>
@@ -126,6 +126,17 @@ namespace QuantityMeasurementTest
         {
             double actualInchValue = this.quantityMeasurement.GetInchValue(1.0);
             Assert.AreNotEqual(0.0, actualInchValue);
+        }
+
+        /// <summary>
+        /// Test method to check zero inch equals zero inch.
+        /// </summary>
+        [Test]
+        public void GivenTwoInchValueAsZero_ShouldEqual()
+        {
+            double firstInchValue = this.quantityMeasurement.GetInchValue(0.0);
+            double secondInchValue = this.quantityMeasurement.GetInchValue(0.0);
+            Assert.AreEqual(firstInchValue, secondInchValue);
         }
     }
 }
