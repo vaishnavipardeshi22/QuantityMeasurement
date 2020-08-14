@@ -49,5 +49,11 @@ namespace QuantityMeasurementTest
             double secondFeetValue = this.quantityMeasurement.GetFeetValue(1.0);
             Assert.AreNotEqual(firstFeetValue, secondFeetValue);
         }
+
+        [Test]
+        public void GivenNullValue_shouldReturnFalse()
+        {
+            Assert.IsFalse(this.quantityMeasurement.Equals(null));
+        }
     }
 }
