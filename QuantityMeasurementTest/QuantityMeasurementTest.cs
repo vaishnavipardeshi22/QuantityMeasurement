@@ -72,7 +72,7 @@ namespace QuantityMeasurementTest
         /// Test method to check equality of null value.
         /// </summary>
         [Test]
-        public void GivenNullValue_ShouldReturnFalse()
+        public void GivenNullFeetValue_ShouldReturnFalse()
         {
             Assert.IsFalse(this.quantityMeasurement.Equals(null));
         }
@@ -81,7 +81,7 @@ namespace QuantityMeasurementTest
         /// Test method to check equality of reference.
         /// </summary>
         [Test]
-        public void GivenReference_shouldReturnTrue()
+        public void GivenFeetReference_shouldReturnTrue()
         {
             Assert.IsTrue(this.quantityMeasurement.Equals(this.quantityMeasurement));
         }
@@ -90,7 +90,7 @@ namespace QuantityMeasurementTest
         /// Test method to check equality of type.
         /// </summary>
         [Test]
-        public void GivenType_shouldReturnTrue()
+        public void GivenFeetType_shouldReturnTrue()
         {
             QuantityMeasurement firstQuantity = new QuantityMeasurement();
             QuantityMeasurement secondQuantity = new QuantityMeasurement();
@@ -137,6 +137,17 @@ namespace QuantityMeasurementTest
             double firstInchValue = this.quantityMeasurement.GetInchValue(0.0);
             double secondInchValue = this.quantityMeasurement.GetInchValue(0.0);
             Assert.AreEqual(firstInchValue, secondInchValue);
+        }
+
+        /// <summary>
+        /// Test method to check zero inch is not equal to five inch.
+        /// </summary>
+        [Test]
+        public void GivenTwoDifferentInch_ShouldNotEqual()
+        {
+            double firstInchValue = this.quantityMeasurement.GetInchValue(0.0);
+            double secondInchValue = this.quantityMeasurement.GetInchValue(5.0);
+            Assert.AreNotEqual(firstInchValue, secondInchValue);
         }
     }
 }
