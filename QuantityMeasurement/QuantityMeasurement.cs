@@ -14,13 +14,23 @@ namespace QuantityMeasurementProblem
     public class QuantityMeasurement
     {
         /// <summary>
-        /// Function to get double feet value.
+        /// Function to get feet value.
         /// </summary>
         /// <param name="feetValue"></param>
         /// <returns></returns>
         public double GetFeetValue(double feetValue)
         {
             return feetValue;
+        }
+
+        /// <summary>
+        /// Function to get innch value.
+        /// </summary>
+        /// <param name="inchValue"></param>
+        /// <returns></returns>
+        public double GetInchValue(double inchValue)
+        {
+            return inchValue;
         }
 
         /// <summary>

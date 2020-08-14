@@ -77,5 +77,12 @@ namespace QuantityMeasurementTest
             double secondFeetValue = this.quantityMeasurement.GetFeetValue(12.0);
             Assert.AreEqual(firstFeetValue, secondFeetValue);
         }
+
+        [Test]
+        public void GivenInch_ShouldEqual()
+        {
+            double actualInchValue = this.quantityMeasurement.GetInchValue(0.0);
+            Assert.AreEqual(0.0, actualInchValue);
+        }
     }
 }
