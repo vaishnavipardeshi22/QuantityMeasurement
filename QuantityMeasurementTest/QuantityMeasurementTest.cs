@@ -51,7 +51,7 @@ namespace QuantityMeasurementTest
         }
 
         [Test]
-        public void GivenNullValue_shouldReturnFalse()
+        public void GivenNullValue_ShouldReturnFalse()
         {
             Assert.IsFalse(this.quantityMeasurement.Equals(null));
         }
@@ -68,6 +68,14 @@ namespace QuantityMeasurementTest
             QuantityMeasurement firstQuantity = new QuantityMeasurement();
             QuantityMeasurement secondQuantity = new QuantityMeasurement();
             Assert.AreEqual(firstQuantity, secondQuantity);
+        }
+
+        [Test]
+        public void GivenTwoSameFeet_ShouldEqual()
+        {
+            double firstFeetValue = this.quantityMeasurement.GetFeetValue(12.0);
+            double secondFeetValue = this.quantityMeasurement.GetFeetValue(12.0);
+            Assert.AreEqual(firstFeetValue, secondFeetValue);
         }
     }
 }
