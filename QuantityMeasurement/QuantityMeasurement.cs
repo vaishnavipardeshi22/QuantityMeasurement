@@ -1,21 +1,52 @@
-﻿namespace QuantityMeasurementProblem
+﻿// <copyright file="QuantityMeasurement.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace QuantityMeasurementProblem
 {
     using System;
     using System.Collections.Generic;
     using System.Text;
 
+    /// <summary>
+    /// Main class to convert quantity.
+    /// </summary>
     public class QuantityMeasurement
     {
+        /// <summary>
+        /// Function to get double feet value.
+        /// </summary>
+        /// <param name="feetValue"></param>
+        /// <returns></returns>
         public double GetFeetValue(double feetValue)
         {
             return feetValue;
         }
 
+        /// <summary>
+        /// Override equals method.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
-            return base.Equals(obj);
+            if (obj == null)
+            {
+                return false;
+            }
+
+            if (obj == this)
+            {
+                return true;
+            }
+
+            return true;
         }
 
+        /// <summary>
+        /// Override Get hash code method.
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
         {
             return base.GetHashCode();

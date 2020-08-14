@@ -55,5 +55,11 @@ namespace QuantityMeasurementTest
         {
             Assert.IsFalse(this.quantityMeasurement.Equals(null));
         }
+
+        [Test]
+        public void GivenReference_shouldReturnTrue()
+        {
+            Assert.IsTrue(this.quantityMeasurement.Equals(this.quantityMeasurement));
+        }
     }
 }
