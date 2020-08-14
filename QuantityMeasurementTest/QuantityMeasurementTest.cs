@@ -26,5 +26,12 @@ namespace QuantityMeasurementTest
             double actualFeetValue = this.quantityMeasurement.GetFeetValue(0.0);
             Assert.AreEqual(0.0, actualFeetValue);
         }
+
+        [Test]
+        public void GivenFeet_ShouldNotEqual()
+        {
+            double actualFeetValue = this.quantityMeasurement.GetFeetValue(1.0);
+            Assert.AreNotEqual(0.0, actualFeetValue);
+        }
     }
 }
