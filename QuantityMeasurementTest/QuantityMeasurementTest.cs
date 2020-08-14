@@ -61,5 +61,13 @@ namespace QuantityMeasurementTest
         {
             Assert.IsTrue(this.quantityMeasurement.Equals(this.quantityMeasurement));
         }
+
+        [Test]
+        public void GivenType_shouldReturnTrue()
+        {
+            QuantityMeasurement firstQuantity = new QuantityMeasurement();
+            QuantityMeasurement secondQuantity = new QuantityMeasurement();
+            Assert.AreEqual(firstQuantity, secondQuantity);
+        }
     }
 }
