@@ -14,13 +14,14 @@ namespace QuantityMeasurementProblem
     public class QuantityMeasurement
     {
         /// <summary>
-        /// Function to get feet value.
+        /// Function to get converted unit value.
         /// </summary>
         /// <param name="unitValue"></param>
+        /// <param name="lengthUnit"></param>
         /// <returns></returns>
-        public double GetUnitValue(double unitValue)
+        public double GetConvertUnitValue(double unitValue, Length.LengthUnit lengthUnit)
         {
-            return unitValue;
+            return unitValue * new Length().GetValue(lengthUnit);
         }
 
         /// <summary>
