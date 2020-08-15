@@ -69,7 +69,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test method to check equality of null value.
+        /// Test method to check equality of null feet value.
         /// </summary>
         [Test]
         public void GivenNullFeetValue_ShouldReturnFalse()
@@ -148,6 +148,15 @@ namespace QuantityMeasurementTest
             double firstInchValue = this.quantityMeasurement.GetInchValue(0.0);
             double secondInchValue = this.quantityMeasurement.GetInchValue(5.0);
             Assert.AreNotEqual(firstInchValue, secondInchValue);
+        }
+
+        /// <summary>
+        /// Test method to check equality of null inch value.
+        /// </summary>
+        [Test]
+        public void GivenNullInchValue_ShouldReturnFalse()
+        {
+            Assert.IsFalse(this.quantityMeasurement.Equals(null));
         }
     }
 }
