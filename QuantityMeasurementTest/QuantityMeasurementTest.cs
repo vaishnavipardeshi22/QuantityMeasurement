@@ -167,5 +167,16 @@ namespace QuantityMeasurementTest
         {
             Assert.IsTrue(this.quantityMeasurement.Equals(this.quantityMeasurement));
         }
+
+        /// <summary>
+        /// Test method to check equality of type.
+        /// </summary>
+        [Test]
+        public void GivenInchType_shouldReturnTrue()
+        {
+            QuantityMeasurement firstQuantity = new QuantityMeasurement();
+            QuantityMeasurement secondQuantity = new QuantityMeasurement();
+            Assert.AreEqual(firstQuantity, secondQuantity);
+        }
     }
 }
