@@ -150,11 +150,24 @@ namespace QuantityMeasurementTest
             Assert.AreEqual(firstInchValue, secondInchValue);
         }
 
+        /// <summary>
+        /// Test method to check one feet equals to twelve inch.
+        /// </summary>
         [Test]
         public void GivenFeetValueConvertToInch_ShouldReturnEqual()
         {
             double actualInchValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.FEET_TO_INCH);
             Assert.AreEqual(12.0, actualInchValue);
+        }
+
+        /// <summary>
+        /// Test method to check three feet equals to one yard.
+        /// </summary>
+        [Test]
+        public void GivenFeetValueConvertToYard_ShouldReturnEqual()
+        {
+            double actualYardValue = this.quantityMeasurement.GetConvertUnitValue(3.0, Length.LengthUnit.FEET_TO_YARD);
+            Assert.AreEqual(1.0, actualYardValue);
         }
     }
 }
