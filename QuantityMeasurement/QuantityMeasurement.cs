@@ -16,21 +16,11 @@ namespace QuantityMeasurementProblem
         /// <summary>
         /// Function to get feet value.
         /// </summary>
-        /// <param name="feetValue"></param>
+        /// <param name="unitValue"></param>
         /// <returns></returns>
-        public double GetFeetValue(double feetValue)
+        public double GetUnitValue(double unitValue)
         {
-            return feetValue;
-        }
-
-        /// <summary>
-        /// Function to get innch value.
-        /// </summary>
-        /// <param name="inchValue"></param>
-        /// <returns></returns>
-        public double GetInchValue(double inchValue)
-        {
-            return inchValue;
+            return unitValue;
         }
 
         /// <summary>
