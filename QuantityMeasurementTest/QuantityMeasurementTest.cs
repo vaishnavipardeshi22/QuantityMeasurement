@@ -178,5 +178,16 @@ namespace QuantityMeasurementTest
             QuantityMeasurement secondQuantity = new QuantityMeasurement();
             Assert.AreEqual(firstQuantity, secondQuantity);
         }
+
+        /// <summary>
+        /// Test method to check equality of value.
+        /// </summary>
+        [Test]
+        public void GivenTwoSameInch_ShouldEqual()
+        {
+            double firstInchValue = this.quantityMeasurement.GetInchValue(12.0);
+            double secondInchValue = this.quantityMeasurement.GetInchValue(12.0);
+            Assert.AreEqual(firstInchValue, secondInchValue);
+        }
     }
 }
