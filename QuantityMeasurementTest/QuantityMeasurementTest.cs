@@ -78,7 +78,7 @@ namespace QuantityMeasurementTest
         }
 
         /// <summary>
-        /// Test method to check equality of reference.
+        /// Test method to check equality of feet reference.
         /// </summary>
         [Test]
         public void GivenFeetReference_shouldReturnTrue()
@@ -157,6 +157,15 @@ namespace QuantityMeasurementTest
         public void GivenNullInchValue_ShouldReturnFalse()
         {
             Assert.IsFalse(this.quantityMeasurement.Equals(null));
+        }
+
+        /// <summary>
+        /// Test method to check equality of inch reference.
+        /// </summary>
+        [Test]
+        public void GivenInchReference_shouldReturnTrue()
+        {
+            Assert.IsTrue(this.quantityMeasurement.Equals(this.quantityMeasurement));
         }
     }
 }
