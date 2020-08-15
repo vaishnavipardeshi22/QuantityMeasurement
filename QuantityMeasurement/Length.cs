@@ -30,6 +30,11 @@
             /// Enum for inch to yard conversion.
             /// </summary>
             INCH_TO_YARD,
+
+            /// <summary>
+            /// Enum for yard to inch conversion.
+            /// </summary>
+            YARD_TO_INCH,
         }
 
         /// <summary>
@@ -45,6 +50,7 @@
                 LengthUnit.INCH_TO_FEET => 1 / 12.0,
                 LengthUnit.FEET_TO_YARD => 1 / 3.0,
                 LengthUnit.INCH_TO_YARD => 1 / 36.0,
+                LengthUnit.YARD_TO_INCH => 1 * 36.0,
                 _ => 0.0,
             };
         }
