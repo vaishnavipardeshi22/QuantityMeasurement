@@ -341,5 +341,15 @@ namespace QuantityMeasurementTest
             double actualWeight = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.KILOGRAM_TO_GRAM);
             Assert.AreEqual(1000.0, actualWeight);
         }
+
+        /// <summary>
+        /// Test method to check one tonne is equal to thousand kilogram.
+        /// </summary>
+        [Test]
+        public void givenOneTonneToConvertToKilogram_ShouldReturnEqual()
+        {
+            double actualWeight = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.TONNE_TO_KILOGRAM);
+            Assert.AreEqual(1000.0, actualWeight);
+        }
     }
 }

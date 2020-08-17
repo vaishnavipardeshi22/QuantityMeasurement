@@ -85,6 +85,11 @@
             /// Enum for kilogram to gram conversion.
             /// </summary>
             KILOGRAM_TO_GRAM,
+
+            /// <summary>
+            /// Enum for tonne to kilogram conversion.
+            /// </summary>
+            TONNE_TO_KILOGRAM,
         }
 
         /// <summary>
@@ -111,6 +116,7 @@
                 UnitType.LITRE_TO_MILLILITRE => 1 * 1000.0,
                 UnitType.MILLILITRE_TO_LITRE => 1 / 1000.0,
                 UnitType.KILOGRAM_TO_GRAM => 1 * 1000.0,
+                UnitType.TONNE_TO_KILOGRAM => 1 * 1000.0,
                 _ => 0.0,
             };
         }
