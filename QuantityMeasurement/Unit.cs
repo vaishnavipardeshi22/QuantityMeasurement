@@ -62,9 +62,14 @@
             CENTIMETER_TO_INCH,
 
             /// <summary>
-            /// Enum for gallon to litres.
+            /// Enum for gallon to litres conversion.
             /// </summary>
             GALLON_TO_LITRES,
+
+            /// <summary>
+            /// Enum for litre to millilitre conversion.
+            /// </summary>
+            LITRE_TO_MILLILITRE,
         }
 
         /// <summary>
@@ -87,6 +92,7 @@
                 UnitType.INCH_TO_CENTIMETER => 1 * 2.5,
                 UnitType.CENTIMETER_TO_INCH => 1 / 2.5,
                 UnitType.GALLON_TO_LITRES => 1 * 3.78,
+                UnitType.LITRE_TO_MILLILITRE => 1 * 1000.0,
                 _ => 0.0,
             };
         }
