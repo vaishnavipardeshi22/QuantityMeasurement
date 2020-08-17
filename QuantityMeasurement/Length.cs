@@ -4,12 +4,12 @@
     using System.Collections.Generic;
     using System.Text;
 
-    public class Length
+    public class Unit
     {
         /// <summary>
         /// Enum For length unit.
         /// </summary>
-        public enum LengthUnit
+        public enum UnitType
         {
             /// <summary>
             /// Enum for feet unit type.
@@ -60,27 +60,33 @@
             /// Enum for centimeter to inch conversion.
             /// </summary>
             CENTIMETER_TO_INCH,
+
+            /// <summary>
+            /// Enum for gallon to litres.
+            /// </summary>
+            GALLON_TO_LITRES,
         }
 
         /// <summary>
         /// Function to get value of enum.
         /// </summary>
-        /// <param name="lengthUnit"></param>
+        /// <param name="unitType"></param>
         /// <returns></returns>
-        public double GetValue(LengthUnit lengthUnit)
+        public double GetValue(UnitType unitType)
         {
-            return lengthUnit switch
+            return unitType switch
             {
-                LengthUnit.FEET => 1.0,
-                LengthUnit.INCH => 1.0,
-                LengthUnit.FEET_TO_INCH => 1 * 12.0,
-                LengthUnit.INCH_TO_FEET => 1 / 12.0,
-                LengthUnit.FEET_TO_YARD => 1 / 3.0,
-                LengthUnit.INCH_TO_YARD => 1 / 36.0,
-                LengthUnit.YARD_TO_INCH => 1 * 36.0,
-                LengthUnit.YARD_TO_FEET => 1 * 3.0,
-                LengthUnit.INCH_TO_CENTIMETER => 1 * 2.5,
-                LengthUnit.CENTIMETER_TO_INCH => 1 / 2.5,
+                UnitType.FEET => 1.0,
+                UnitType.INCH => 1.0,
+                UnitType.FEET_TO_INCH => 1 * 12.0,
+                UnitType.INCH_TO_FEET => 1 / 12.0,
+                UnitType.FEET_TO_YARD => 1 / 3.0,
+                UnitType.INCH_TO_YARD => 1 / 36.0,
+                UnitType.YARD_TO_INCH => 1 * 36.0,
+                UnitType.YARD_TO_FEET => 1 * 3.0,
+                UnitType.INCH_TO_CENTIMETER => 1 * 2.5,
+                UnitType.CENTIMETER_TO_INCH => 1 / 2.5,
+                UnitType.GALLON_TO_LITRES => 1 * 3.78,
                 _ => 0.0,
             };
         }

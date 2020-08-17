@@ -17,11 +17,11 @@ namespace QuantityMeasurementProblem
         /// Function to get converted unit value.
         /// </summary>
         /// <param name="unitValue"></param>
-        /// <param name="lengthUnit"></param>
+        /// <param name="unitType"></param>
         /// <returns></returns>
-        public double GetConvertUnitValue(double unitValue, Length.LengthUnit lengthUnit)
+        public double GetConvertUnitValue(double unitValue, Unit.UnitType unitType)
         {
-            return unitValue * new Length().GetValue(lengthUnit);
+            return unitValue * new Unit().GetValue(unitType);
         }
 
         /// <summary>
