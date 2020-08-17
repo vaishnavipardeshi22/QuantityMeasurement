@@ -275,5 +275,17 @@ namespace QuantityMeasurementTest
             double addition = this.quantityMeasurement.GetAddition(firstInchValue, secondInchValue);
             Assert.AreEqual(24.0, addition);
         }
+
+        /// <summary>
+        /// Test method to check two inch plus two point five centimeter equal to three inch.
+        /// </summary>
+        [Test]
+        public void GivenLengthInInchAndCentimeter_WhenAdd_ThenReturnResultInInch()
+        {
+            double firstInchValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Length.LengthUnit.INCH);
+            double secondInchValue = this.quantityMeasurement.GetConvertUnitValue(2.5, Length.LengthUnit.CENTIMETER_TO_INCH);
+            double addition = this.quantityMeasurement.GetAddition(firstInchValue, secondInchValue);
+            Assert.AreEqual(3.0, addition);
+        }
     }
 }
