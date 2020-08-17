@@ -251,5 +251,17 @@ namespace QuantityMeasurementTest
             double addition = this.quantityMeasurement.GetAddition(firstInchValue, secondInchValue);
             Assert.AreEqual(4.0, addition);
         }
+
+        /// <summary>
+        /// Test method to check one feet plus two inch equal to fourteen inch.
+        /// </summary>
+        [Test]
+        public void GivenOneFeetAndTwoInchValue_WhenAdd_ReturnResultInInch()
+        {
+            double firstInchValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.FEET_TO_INCH);
+            double secondInchValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Length.LengthUnit.INCH);
+            double addition = this.quantityMeasurement.GetAddition(firstInchValue, secondInchValue);
+            Assert.AreEqual(14.0, addition);
+        }
     }
 }
