@@ -331,5 +331,15 @@ namespace QuantityMeasurementTest
             double addition = this.quantityMeasurement.GetAddition(firstVolume, secondVolume);
             Assert.AreEqual(2.0, addition);
         }
+
+        /// <summary>
+        /// Test method to check one kilogram is equal to thousand gram.
+        /// </summary>
+        [Test]
+        public void GivenOneKilogramToConvertToGrams_ShouldReturnEqual()
+        {
+            double actualWeight = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.KILOGRAM_TO_GRAM);
+            Assert.AreEqual(1000.0, actualWeight);
+        }
     }
 }

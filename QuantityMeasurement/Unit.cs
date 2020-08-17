@@ -80,6 +80,11 @@
             /// Enum for millilitre to litre conversion.
             /// </summary>
             MILLILITRE_TO_LITRE,
+
+            /// <summary>
+            /// Enum for kilogram to gram conversion.
+            /// </summary>
+            KILOGRAM_TO_GRAM,
         }
 
         /// <summary>
@@ -105,6 +110,7 @@
                 UnitType.GALLON_TO_LITRES => 1 * 3.78,
                 UnitType.LITRE_TO_MILLILITRE => 1 * 1000.0,
                 UnitType.MILLILITRE_TO_LITRE => 1 / 1000.0,
+                UnitType.KILOGRAM_TO_GRAM => 1 * 1000.0,
                 _ => 0.0,
             };
         }
