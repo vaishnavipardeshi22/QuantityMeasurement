@@ -32,8 +32,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenTwoFeetValueAsZero_ShouldEqual()
         {
-            double firstFeetValue = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.FEET_TO_INCH);
-            double secondFeetValue = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.FEET_TO_INCH);
+            double firstFeetValue = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.FEET);
+            double secondFeetValue = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.FEET);
             Assert.AreEqual(firstFeetValue, secondFeetValue);
         }
 
@@ -43,8 +43,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenTwoDifferentFeet_ShouldNotEqual()
         {
-            double firstFeetValue = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.FEET_TO_INCH);
-            double secondFeetValue = this.quantityMeasurement.GetConvertUnitValue(5.0, Length.LengthUnit.FEET_TO_INCH);
+            double firstFeetValue = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.FEET);
+            double secondFeetValue = this.quantityMeasurement.GetConvertUnitValue(5.0, Length.LengthUnit.FEET);
             Assert.AreNotEqual(firstFeetValue, secondFeetValue);
         }
 
@@ -83,8 +83,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenTwoSameFeet_ShouldEqual()
         {
-            double firstFeetValue = this.quantityMeasurement.GetConvertUnitValue(12.0, Length.LengthUnit.FEET_TO_INCH);
-            double secondFeetValue = this.quantityMeasurement.GetConvertUnitValue(12.0, Length.LengthUnit.FEET_TO_INCH);
+            double firstFeetValue = this.quantityMeasurement.GetConvertUnitValue(12.0, Length.LengthUnit.FEET);
+            double secondFeetValue = this.quantityMeasurement.GetConvertUnitValue(12.0, Length.LengthUnit.FEET);
             Assert.AreEqual(firstFeetValue, secondFeetValue);
         }
 
@@ -94,8 +94,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenTwoInchValueAsZero_ShouldEqual()
         {
-            double firstInchValue = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.INCH_TO_FEET);
-            double secondInchValue = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.INCH_TO_FEET);
+            double firstInchValue = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.INCH);
+            double secondInchValue = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.INCH);
             Assert.AreEqual(firstInchValue, secondInchValue);
         }
 
@@ -105,8 +105,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenTwoDifferentInch_ShouldNotEqual()
         {
-            double firstInchValue = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.INCH_TO_FEET);
-            double secondInchValue = this.quantityMeasurement.GetConvertUnitValue(5.0, Length.LengthUnit.INCH_TO_FEET);
+            double firstInchValue = this.quantityMeasurement.GetConvertUnitValue(0.0, Length.LengthUnit.INCH);
+            double secondInchValue = this.quantityMeasurement.GetConvertUnitValue(5.0, Length.LengthUnit.INCH);
             Assert.AreNotEqual(firstInchValue, secondInchValue);
         }
 
@@ -145,8 +145,8 @@ namespace QuantityMeasurementTest
         [Test]
         public void GivenTwoSameInch_ShouldEqual()
         {
-            double firstInchValue = this.quantityMeasurement.GetConvertUnitValue(12.0, Length.LengthUnit.INCH_TO_FEET);
-            double secondInchValue = this.quantityMeasurement.GetConvertUnitValue(12.0, Length.LengthUnit.INCH_TO_FEET);
+            double firstInchValue = this.quantityMeasurement.GetConvertUnitValue(12.0, Length.LengthUnit.INCH);
+            double secondInchValue = this.quantityMeasurement.GetConvertUnitValue(12.0, Length.LengthUnit.INCH);
             Assert.AreEqual(firstInchValue, secondInchValue);
         }
 
@@ -238,6 +238,18 @@ namespace QuantityMeasurementTest
         {
             double actualCentimeterValue = this.quantityMeasurement.GetConvertUnitValue(1.0, Length.LengthUnit.INCH_TO_CENTIMETER);
             Assert.AreNotEqual(1.0, actualCentimeterValue);
+        }
+
+        /// <summary>
+        /// Test method to check two inch plus two inch equal to four inch.
+        /// </summary>
+        [Test]
+        public void GivenTwoInchLength_WhenAdd_ThenReturnResult()
+        {
+            double firstInchValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Length.LengthUnit.INCH);
+            double secondInchValue = this.quantityMeasurement.GetConvertUnitValue(2.0, Length.LengthUnit.INCH);
+            double addition = this.quantityMeasurement.GetAddition(firstInchValue, secondInchValue);
+            Assert.AreEqual(4.0, addition);
         }
     }
 }

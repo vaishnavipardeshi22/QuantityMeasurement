@@ -25,6 +25,17 @@ namespace QuantityMeasurementProblem
         }
 
         /// <summary>
+        /// Function to add two unit values.
+        /// </summary>
+        /// <param name="firstValue"></param>
+        /// <param name="secondValue"></param>
+        /// <returns></returns>
+        public double GetAddition(double firstValue, double secondValue)
+        {
+            return firstValue + secondValue;
+        }
+
+        /// <summary>
         /// Override equals method.
         /// </summary>
         /// <param name="obj"></param>

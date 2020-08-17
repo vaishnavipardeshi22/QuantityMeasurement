@@ -12,6 +12,16 @@
         public enum LengthUnit
         {
             /// <summary>
+            /// Enum for feet unit type.
+            /// </summary>
+            FEET,
+
+            /// <summary>
+            /// Enum for inch unit type.
+            /// </summary>
+            INCH,
+
+            /// <summary>
             /// Enum for feet to inch conversion.
             /// </summary>
             FEET_TO_INCH,
@@ -56,6 +66,8 @@
         {
             return lengthUnit switch
             {
+                LengthUnit.FEET => 1.0,
+                LengthUnit.INCH => 1.0,
                 LengthUnit.FEET_TO_INCH => 1 * 12.0,
                 LengthUnit.INCH_TO_FEET => 1 / 12.0,
                 LengthUnit.FEET_TO_YARD => 1 / 3.0,
