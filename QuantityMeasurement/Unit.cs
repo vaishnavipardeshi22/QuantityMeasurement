@@ -75,6 +75,11 @@
             /// Enum for litre to millilitre conversion.
             /// </summary>
             LITRE_TO_MILLILITRE,
+
+            /// <summary>
+            /// Enum for millilitre to litre conversion.
+            /// </summary>
+            MILLILITRE_TO_LITRE,
         }
 
         /// <summary>
@@ -99,6 +104,7 @@
                 UnitType.CENTIMETER_TO_INCH => 1 / 2.5,
                 UnitType.GALLON_TO_LITRES => 1 * 3.78,
                 UnitType.LITRE_TO_MILLILITRE => 1 * 1000.0,
+                UnitType.MILLILITRE_TO_LITRE => 1 / 1000.0,
                 _ => 0.0,
             };
         }

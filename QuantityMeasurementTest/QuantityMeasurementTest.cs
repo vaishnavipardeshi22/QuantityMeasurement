@@ -319,5 +319,17 @@ namespace QuantityMeasurementTest
             double addition = this.quantityMeasurement.GetAddition(firstVolume, secondVolume);
             Assert.AreEqual(7.57, addition, 0.1);
         }
+
+        /// <summary>
+        /// Test method to check addition of one litre and thousand millilitres equal to two litres.
+        /// </summary>
+        [Test]
+        public void GivenOneLitreAndOneMillilitreValue_WhenAdd_ShouldReturnResultInLitres()
+        {
+            double firstVolume = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.LITRE);
+            double secondVolume = this.quantityMeasurement.GetConvertUnitValue(1000.0, Unit.UnitType.MILLILITRE_TO_LITRE);
+            double addition = this.quantityMeasurement.GetAddition(firstVolume, secondVolume);
+            Assert.AreEqual(2.0, addition);
+        }
     }
 }
