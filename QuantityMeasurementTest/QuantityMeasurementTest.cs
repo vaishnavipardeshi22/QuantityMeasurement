@@ -346,10 +346,22 @@ namespace QuantityMeasurementTest
         /// Test method to check one tonne is equal to thousand kilogram.
         /// </summary>
         [Test]
-        public void givenOneTonneToConvertToKilogram_ShouldReturnEqual()
+        public void GivenOneTonneToConvertToKilogram_ShouldReturnEqual()
         {
             double actualWeight = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.TONNE_TO_KILOGRAM);
             Assert.AreEqual(1000.0, actualWeight);
+        }
+
+        /// <summary>
+        /// Test method to check addition of one tonne and thousand gram is equal to one thousand and one kilogram.
+        /// </summary>
+        [Test]
+        public void GivenTonneAndGram_WhenAdd_ShouldReturnResult_InKilogram()
+        {
+            double firstWeight = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.TONNE_TO_KILOGRAM);
+            double secondWeight = this.quantityMeasurement.GetConvertUnitValue(1000.0, Unit.UnitType.GRAM_TO_KILOGRAM);
+            double addition = this.quantityMeasurement.GetAddition(firstWeight, secondWeight);
+            Assert.AreEqual(1001.0, addition);
         }
     }
 }
