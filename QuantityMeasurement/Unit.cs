@@ -22,6 +22,11 @@
             INCH,
 
             /// <summary>
+            /// Enum for litre volume type.
+            /// </summary>
+            LITRE,
+
+            /// <summary>
             /// Enum for feet to inch conversion.
             /// </summary>
             FEET_TO_INCH,
@@ -83,6 +88,7 @@
             {
                 UnitType.FEET => 1.0,
                 UnitType.INCH => 1.0,
+                UnitType.LITRE => 1.0,
                 UnitType.FEET_TO_INCH => 1 * 12.0,
                 UnitType.INCH_TO_FEET => 1 / 12.0,
                 UnitType.FEET_TO_YARD => 1 / 3.0,

@@ -307,5 +307,17 @@ namespace QuantityMeasurementTest
             double actualVolume = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.LITRE_TO_MILLILITRE);
             Assert.AreEqual(1000.0, actualVolume);
         }
+
+        /// <summary>
+        /// Test method to check addition of one gallon and three point seven eight litres equal to seven point five seven litres.
+        /// </summary>
+        [Test]
+        public void GivenOneGallonAndOneLitreValue_WhenAdd_ShouldReturnResultInLitres()
+        {
+            double firstVolume = this.quantityMeasurement.GetConvertUnitValue(1.0, Unit.UnitType.GALLON_TO_LITRES);
+            double secondVolume = this.quantityMeasurement.GetConvertUnitValue(3.785, Unit.UnitType.LITRE);
+            double addition = this.quantityMeasurement.GetAddition(firstVolume, secondVolume);
+            Assert.AreEqual(7.57, addition, 0.1);
+        }
     }
 }
