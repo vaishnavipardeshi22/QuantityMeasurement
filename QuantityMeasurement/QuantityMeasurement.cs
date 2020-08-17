@@ -21,6 +21,11 @@ namespace QuantityMeasurementProblem
         /// <returns></returns>
         public double GetConvertUnitValue(double unitValue, Unit.UnitType unitType)
         {
+            if (unitType.Equals(Unit.UnitType.CELSIUS))
+            {
+                return (unitValue * 9.0 / 5.0) + 32;
+            }
+
             return unitValue * new Unit().GetValue(unitType);
         }
 

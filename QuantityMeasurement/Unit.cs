@@ -27,6 +27,11 @@
             LITRE,
 
             /// <summary>
+            /// Enum for celsius unit type.
+            /// </summary>
+            CELSIUS,
+
+            /// <summary>
             /// Enum for feet to inch conversion.
             /// </summary>
             FEET_TO_INCH,
@@ -106,9 +111,6 @@
         {
             return unitType switch
             {
-                UnitType.FEET => 1.0,
-                UnitType.INCH => 1.0,
-                UnitType.LITRE => 1.0,
                 UnitType.FEET_TO_INCH => 1 * 12.0,
                 UnitType.INCH_TO_FEET => 1 / 12.0,
                 UnitType.FEET_TO_YARD => 1 / 3.0,
@@ -123,7 +125,7 @@
                 UnitType.KILOGRAM_TO_GRAM => 1 * 1000.0,
                 UnitType.TONNE_TO_KILOGRAM => 1 * 1000.0,
                 UnitType.GRAM_TO_KILOGRAM => 1 / 1000.0,
-                _ => 0.0,
+                _ => 1.0,
             };
         }
     }

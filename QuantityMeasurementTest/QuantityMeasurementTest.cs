@@ -363,5 +363,15 @@ namespace QuantityMeasurementTest
             double addition = this.quantityMeasurement.GetAddition(firstWeight, secondWeight);
             Assert.AreEqual(1001.0, addition);
         }
+
+        /// <summary>
+        /// Test method to check two hundread and two fahrenheit is equal to hundread celsius.
+        /// </summary>
+        [Test]
+        public void GivenFahrenheitConvertToCelsius_ShouldReturnEqual()
+        {
+            double celciusValue = this.quantityMeasurement.GetConvertUnitValue(100.0, Unit.UnitType.CELSIUS);
+            Assert.AreEqual(212.0, celciusValue);
+        }
     }
 }
